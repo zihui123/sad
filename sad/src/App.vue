@@ -1,10 +1,10 @@
 <template>
   <nav>
-    <router-link to="/material">原料廠</router-link> |
+    <!-- <router-link to="/material">原料廠</router-link> |
     <router-link to="/process">加工廠</router-link> |
     <router-link to="/seller">經銷商</router-link> |
     <router-link to="/customer">顧客</router-link> |
-    <router-link to="/qrcode">qrcode</router-link>
+    <router-link to="/qrcode">qrcode</router-link> -->
   </nav>
   <router-view/>
 </template>

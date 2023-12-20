@@ -83,6 +83,11 @@ export default {
 </script>
     
 <style>
+.input{
+   margin-left: 700px;
+    display: flex;
+    align-items: center;
+  }
 .production-history {
     margin-left: 500px;
   width: 850px;

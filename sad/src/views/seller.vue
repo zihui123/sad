@@ -4,7 +4,7 @@
     </div>
     <div class="input">
         <h3>經銷商產品編號：</h3>
-        <el-input  v-model="input" placeholder="Please input" :style="{ width: '250px' }" clearable/>
+        <input v-model="input" placeholder="Please input" :style="{ width: '250px' ,height:'25px'}" clearable/>
         <el-row>
             <el-button round :style="{ marginLeft: '6px' }" @click="search">搜尋</el-button>
         </el-row>
@@ -54,6 +54,10 @@
         <td class="left-bar"><strong>聯絡資訊</strong></td>
         <td>{{ deliveryInfo.contactInfo }}</td>
       </tr>
+      <tr>
+        <td class="left-bar"><strong>上游報告連結</strong></td>
+        <td><a :href="deliveryInfo.link_1">上游檢驗連結    </a><a :href="deliveryInfo.link_2">報告連結</a></td>
+      </tr>
     </table>
 </div>
     <div class="invoice-column">
@@ -82,6 +86,8 @@
         qualityReport: '合格',
         specialInstructions: '特殊說明: 請小心處理外包裝',
         contactInfo: '加工商聯絡資訊: Manufacturing Co., 聯絡人: 陳榜, 電話: 093-193-4832',
+        link_1:'/image_1',
+        link_2:'/image_2',
       },
     };
   },

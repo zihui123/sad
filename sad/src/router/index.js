@@ -46,6 +46,23 @@ const routes = [
     path: "/qrcode",
       name: "qrcode",
       component: () => import("../views/qrcode.vue"),
+  },
+  {
+    
+      path: "/procedure",
+        name: "procedure",
+        component: () => import("../views/procedure.vue"),
+    
+  },
+  {
+    path: "/image_1",
+      name: "image_1",
+      component: () => import("../views/image_1.vue"),
+  },
+  {
+    path: "/image_2",
+      name: "image_2",
+      component: () => import("../views/image_2.vue"),
   }
 ]
 

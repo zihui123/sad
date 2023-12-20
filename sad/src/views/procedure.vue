@@ -1,7 +1,9 @@
+
+<!-- eslint-disable -->
 <template>
-    <div class="feedBack">
-      <h1>This is an feedBack system</h1>
-      <h2>請選擇身份</h2>
+    <div class="procedure">
+      <h1>This is an Blame system</h1>
+      <h2>請選擇咎責流程</h2>
       <el-select v-model="value" class="m-2" placeholder="Select" size="large" :style="{ width: '250px' }" @change="handleChange">
     <el-option
       v-for="item in options"
@@ -15,7 +17,9 @@
     </el-row>
     </div>
   </template>
+
 <script setup>
+
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -23,45 +27,32 @@ const value = ref('')
 const router = useRouter();
 const options = [
   {
-    value: '原料廠',
-    label: '原料廠',
+    value: '廠商',
+    label: '廠商',
   },
   {
-    value: '加工廠',
-    label: '加工廠',
+    value: '顧客',
+    label: '顧客',
   },
-  {
-    value: '經銷商',
-    label: '經銷商',
-  },
-//   {
-//     value: '顧客',
-//     label: '顧客',
-//   },
   
 ]
 const search = () => {
-  // 根據選擇的 value 導航到不同的頁面
   switch (value.value) {
-    case '原料廠':
-      router.push('/material')
+    case '廠商':
+      router.push('/feedBack')
       break
-    case '經銷商':
-      router.push('/seller')
+    case '顧客':
+      router.push('/customer')
       break
-    case '加工廠':
-      router.push('/process')
-      break
-    // case '顧客':
-    //   router.push('/customer')
-    //   break
+    
     default:
       break
   }
 }
+
 </script>
 <style>
-.feedBack {
+.procedure {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;

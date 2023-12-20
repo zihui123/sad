@@ -4,7 +4,7 @@
     </div>
     <div class="input">
         <h3>原料廠產品編號：</h3>
-        <el-input  v-model="input" placeholder="Please input" :style="{ width: '250px' }" clearable/>
+        <input v-model="input" placeholder="Please input" :style="{ width: '250px' ,height:'25px'}" clearable/>
         <el-row>
             <el-button round :style="{ marginLeft: '6px' }" @click="search">搜尋</el-button>
         </el-row>

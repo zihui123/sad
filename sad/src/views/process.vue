@@ -36,6 +36,10 @@
         <td class="left-bar"><strong>生產日期</strong></td>
         <td>{{ shoeInfo.productionDate }}</td>
       </tr>
+      <tr>
+        <td class="left-bar"><strong>檢驗報告連結</strong></td>
+        <td><a :href="shoeInfo.link" >檢驗報告連結</a></td>
+      </tr>
     </table>
     </div>
   </template>
@@ -54,6 +58,7 @@ export default {
                 factory: '原料廠 Shoes Co.',
                 productionDate: '2023-11-21',
                 color:'閃電 灰白',
+                link:'/image_1',
                 // 其他鞋子的詳細資訊
             },
       
